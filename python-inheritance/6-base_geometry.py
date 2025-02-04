@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+
 """
 Module for BaseGeometry
 """
+
+
 class BaseGeometry:
     """
     still empty, area not implemented
