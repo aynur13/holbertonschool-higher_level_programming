@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+
 """
 Module for custom list (inherits from list)
 """
+
+
 class MyList(list):
     """Custom list with sorted print and no infinity values."""
     
