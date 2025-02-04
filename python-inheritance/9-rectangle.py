@@ -21,6 +21,7 @@ class Rectangle(BaseGeometry):
         """Method to redefine a area method in the parent class"""
         
         return self.__width * self.__height
+    
     def __str__(self):
         """__str__ method for return the next string"""
         
