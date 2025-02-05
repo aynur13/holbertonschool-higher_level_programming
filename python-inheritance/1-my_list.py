@@ -1,19 +1,21 @@
 #!/usr/bin/python3
-
 """
-Module for custom list (inherits from list)
+module for my lists (inherits form list)
 """
 
 
 class MyList(list):
-    """Custom list with sorted print and no infinity values."""
-    
+    """
+    elements of the list int type
+    return my list and sorted list
+    """
     def print_sorted(self):
-        """Prints the list sorted, excluding infinity values."""
-        print(sorted(x for x in self if x not in [float('inf'), float('-inf')]))
+        # Remove infinite values before sorting
+        filtered_list = [x for x in self if x != float('inf')]
+        print(sorted(filtered_list))
 
     def append(self, item):
-        """Appends item, raises error if it's infinity."""
-        if item in [float('inf'), float('-inf')]:
-            raise ValueError("Cannot append infinity values.")
+        # Check if the item is infinite before appending
+        if item == float('inf'):
+            raise ValueError("cannot convert float infinity to integer")
         super().append(item)
