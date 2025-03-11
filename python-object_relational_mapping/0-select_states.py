@@ -1,23 +1,7 @@
 #!/usr/bin/python3
-"""Module"""
+"""
+Script that lists all states from the data base hbtn_0e_0_usa.
+"""
 
-if __name__ == '__main__':
-    from sys import argv
-    import MySQLdb
-
-    db = MySQLdb.connect(
-        user=argv[1],
-        password=argv[2],
-        database=argv[3]
-    )
-    cursor = db.cursor()
-
-    cursor.execute('SELECT * FROM states')
-
-    for state in cursor.fetchall():
-        print(state)
-
-    if cursor:
-        cursor.close()
-    if db:
-        db.close()
+import MySQLdb
+import sys
